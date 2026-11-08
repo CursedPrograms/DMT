@@ -1,14 +1,11 @@
-# Project.toml
-
-[project]
-name = "MyJuliaProject"
-version = "0.1.0"
+name = "JuliaSetGen"
+version = "0.2.0"
 
 [deps]
-# Dependencies can be added here. This is just an example.
-# The format is package_name = "version" or package_name.
+ColorSchemes = "35d6a980-a343-548e-a6ea-1d62b119f2f4"
+PNGFiles = "f57f5aa1-a3ce-4bc8-8ab9-96f992907883"
 
-# Uncomment and modify the following lines as needed.
-# Example:
-# CSV = "0.8.0"
-# Plots = "1.6.12"
+[compat]
+ColorSchemes = "3"
+PNGFiles = "0.3, 0.4"
+julia = "1.6"
