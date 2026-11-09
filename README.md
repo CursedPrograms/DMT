@@ -2,13 +2,16 @@
   <img alt="Julia" src="https://img.shields.io/badge/julia%20-%23323330.svg?&style=for-the-badge&logo=julia&logoColor=white"/>
 </div>
 
-# Julia-Set-Gen
+# DMT
+
+**A Julia set explorer by Cursed Entertainment** (it was Julia-Set-Gen).
 
 <div align="center">
   <img src="images/julia-cursed.png" alt="A Julia set for c = 0.285 + 0.01i in the Cursed palette" width="600">
 </div>
 
-Julia-Set-Gen draws Julia sets: fractals that are close cousins of the Mandelbrot set.
+DMT draws Julia sets: fractals that are close cousins of the Mandelbrot set. Explore them live in the window, then save
+them at full size, rendered by the Julia program.
 
 **How it works.** Every pixel is a point *z* on the complex plane. The program applies *f(z) = z² + c* to it over and over. Some points stay close to the middle forever: those are the Julia set, drawn in the darkest colour. Others fly off to infinity: those are coloured by how many steps it took them to leave the circle |z| ≤ 2, smoothed so the colours blend instead of forming bands. Each value of the constant *c* gives a different shape.
 
@@ -20,7 +23,25 @@ Julia-Set-Gen draws Julia sets: fractals that are close cousins of the Mandelbro
 | `--c=-0.4+0.6im --palette=inferno` | `--c=0.285+0.01im --palette=cursed` |
 | ![Inferno palette](images/julia-inferno.png) | ![Cursed palette](images/julia-cursed.png) |
 
-## How to run
+## The window
+
+![DMT's window: the Douady rabbit in the cursed palette](images/window.png)
+
+Start `run.bat` (or `run.ps1`, `run.sh`). The first time it sets up Python (numpy, Pillow, customtkinter in `venv`),
+and Julia's packages for `Main.jl` if Julia is installed.
+
+- **Drag** to move, **mouse wheel** to zoom (towards the pointer).
+- **The set:** presets (Classic, Dendrite, Douady rabbit, San Marco, Siegel disk, Galaxies, Seahorses, Lightning), or
+  move **c** yourself with its two sliders.
+- **Animate:** c walks a slow circle and the fractal breathes and morphs.
+- **The look:** cursed, hot, inferno, magma, viridis, neon, bone; **Iterations** for finer detail.
+- **Save:** 1920x1080, 3840x2160 or 2048x2048, rendered by `Main.jl` with Julia (the preview's settings exactly), or
+  by Python when Julia isn't installed.
+
+The preview is the same maths as `Main.jl` (smoothed escape counts, the set in the darkest colour) in numpy:
+a few hundred milliseconds a frame, half size while it's moving.
+
+## How to run the Julia program on its own
 
 You need [Julia](https://julialang.org/downloads/) 1.6 or newer.
 
