@@ -4,7 +4,7 @@
 
 # DMT
 
-**A Julia set explorer by Cursed Entertainment** (it was Julia-Set-Gen).
+**A Julia set explorer by Cursed Entertainment.**
 
 <div align="center">
   <img src="images/julia-cursed.png" alt="A Julia set for c = 0.285 + 0.01i in the Cursed palette" width="600">
