@@ -1,0 +1,19 @@
+/* DMT's page: the Cursed corporate colours (navy, blue, pink), solid, no gradients or shadows. */
+:root { --navy: #001725; --deep: #004067; --blue: #005184; --sky: #34a9e3; --pink: #f088e9; --text: #e8eef3; --muted: #9fb3c2; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--navy); color: var(--text); font-family: "Segoe UI", system-ui, sans-serif; line-height: 1.6; }
+header { text-align: center; padding: 48px 20px 28px; background: var(--deep); border-bottom: 3px solid var(--pink); }
+header .cursed { width: min(260px, 60vw); }
+h1 { font-size: clamp(56px, 12vw, 110px); margin: 0; color: var(--pink); letter-spacing: 0.06em; line-height: 1; }
+.tagline { color: var(--sky); font-size: 20px; margin: 8px 0 18px; }
+.btn { display: inline-block; background: var(--blue); color: #fff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid var(--pink); }
+.btn:hover { background: var(--pink); color: var(--navy); }
+main { max-width: 1040px; margin: 0 auto; padding: 12px 20px 40px; }
+h2 { color: var(--pink); border-bottom: 1px solid var(--blue); padding-bottom: 6px; }
+a { color: var(--sky); }
+code { background: var(--deep); padding: 1px 6px; border-radius: 4px; }
+.shot, .grid img { width: 100%; border-radius: 8px; border: 1px solid var(--blue); cursor: zoom-in; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+footer { text-align: center; color: var(--muted); padding: 24px; border-top: 1px solid var(--deep); }
+.lightbox { position: fixed; inset: 0; background: rgba(0, 23, 37, 0.94); display: flex; align-items: center; justify-content: center; cursor: zoom-out; }
+.lightbox img { max-width: 96vw; max-height: 94vh; border-radius: 8px; }
